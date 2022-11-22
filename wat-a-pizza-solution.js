@@ -76,8 +76,19 @@ const order = {
 };
 
 //Write function to filter menu items by Category and sort them alphabetically
+function listByCategory(menu, categoryName){
+    let filterResult = menu.filter(item => item.category == 'Beverages').map(item =>{
+        return "Category : "+categoryName+" Name : "+item.name+" Price : "+item.price
+    })
+    return filterResult;
+}
+
+console.log(listByCategory(menu,"Starters"))
 
 //Write function to calculate the amount of each ordered item
+function calculateAmount(menu, order){
+    let mapAmount = order.filter(item => item.name == "")
+}
 
 //Write function to calculate the subtotal amount for the main meal ordered
 
